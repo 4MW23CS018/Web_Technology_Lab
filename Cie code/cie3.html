@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to My Homepage</title>
+  <link rel="stylesheet" href="cie3.css" id="stylesheet">
+  <script>
+    function setStyle(style) {
+      const link = document.getElementById('stylesheet');
+      if (style === 's1') {
+        link.href = 'cie3.css';
+      } else if (style === 's2') {
+        link.href = 'cie3.1.css';
+      } else if (style === 's3') {
+        link.href = '#'; // Add your third stylesheet here
+      } else if (style === 's4') {
+        link.href = '#'; // Add your fourth stylesheet here
+      } else if (style === 's5') {
+        link.href = ''; // No stylesheet
+      }
+    }
+  </script>
+</head>
+<body class="style">
+<div class="header">
+<h1>Welcome to My HomePage</h1>
+<h6>use the menu to select different Stylesheets</h6>
+</div>
+<div class="container">
+<nav>
+<button onclick="setStyle('s1')">Stylesheet 1</button>
+<button onclick="setStyle('s2')">Stylesheet 2</button>
+<button onclick="setStyle('s3')">Stylesheet 3</button>
+<button onclick="setStyle('s4')">Stylesheet 4</button>
+<button onclick="setStyle('s5')">NO Stylesheet</button>
+</nav>
+
+<main class="content">
+<h2>Same Page Different Stylesheets</h2><br>
+<p>This is a demonstration of how different stylesheets can change the layout of your html page.</p>
+<a href="#" onclick="setStyle('s1'); return false;">Stylesheet 1</a>
+<a href="#" onclick="setStyle('s2'); return false;">Stylesheet 2</a>
+<a href="#" onclick="setStyle('s3'); return false;">Stylesheet 3</a>
+<a href="#" onclick="setStyle('s4'); return false;">Stylesheet 4</a>
+<a href="#" onclick="setStyle('s5'); return false;">No Stylesheet</a>
+
+<h3><br>No Styles</h3><br>
+<p>This page uses DIV elements to group different sections of the Html page.</p>
+</main>
+
+<div class="sidebar">
+<h3>Side Bar</h3>
+<p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</div>
+</div>
+</body>
+</html>
